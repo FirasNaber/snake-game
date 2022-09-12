@@ -30,7 +30,7 @@ class Snake:
         self.segments[0].forward(SEGMENT_SIZE)
 
     def up(self):
-        if self.snake_head.heading() is not DOWN:
+        if self.snake_head.heading() != DOWN:
             self.snake_head.setheading(UP)
 
     def down(self):
