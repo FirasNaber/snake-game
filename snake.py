@@ -1,6 +1,11 @@
 from turtle import Turtle
 
 SEGMENT_SIZE = 20
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
+
 
 class Snake:
 
@@ -25,13 +30,17 @@ class Snake:
         self.segments[0].forward(SEGMENT_SIZE)
 
     def up(self):
-        self.snake_head.setheading(90)
+        if self.snake_head.setheading() != DOWN:
+            self.snake_head.setheading(UP)
 
     def down(self):
-        self.snake_head.setheading(270)
+        if self.snake_head.setheading() != UP:
+            self.snake_head.setheading(270)
 
     def left(self):
-        self.snake_head.setheading(180)
+        if self.snake_head.setheading() != RIGHT:
+            self.snake_head.setheading(180)
 
     def right(self):
-        self.snake_head.setheading(0)
+        if self.snake_head.setheading() != LEFT:
+            self.snake_head.setheading(0)
