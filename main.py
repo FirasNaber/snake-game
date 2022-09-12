@@ -24,5 +24,6 @@ while not game_over:
     time.sleep(0.1)
     for seg_num in range(len(segments) - 1, 0, -1):
         segments[seg_num].goto(segments[seg_num - 1].pos())
+    segments[0].forward(20)
 
 screen.exitonclick()
