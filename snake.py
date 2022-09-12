@@ -2,12 +2,12 @@ from turtle import Turtle
 
 SEGMENT_SIZE = 20
 
-
 class Snake:
 
     def __init__(self):
         self.segments = []
         self.create_snake()
+        self.snake_head = self.segments[0]
 
     def create_snake(self):
         x_coord = 0
@@ -25,13 +25,13 @@ class Snake:
         self.segments[0].forward(SEGMENT_SIZE)
 
     def up(self):
-        self.segments[0].setheading(90)
+        self.snake_head.setheading(90)
 
     def down(self):
-        self.segments[0].setheading(270)
+        self.snake_head.setheading(270)
 
     def left(self):
-        self.segments[0].setheading(180)
+        self.snake_head.setheading(180)
 
     def right(self):
-        self.segments[0].setheading(0)
+        self.snake_head.setheading(0)
