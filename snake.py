@@ -23,3 +23,15 @@ class Snake:
         for seg_num in range(len(self.segments) - 1, 0, -1):
             self.segments[seg_num].goto(self.segments[seg_num - 1].pos())
         self.segments[0].forward(SEGMENT_SIZE)
+
+    def up(self):
+        self.segments[0].setheading(90)
+
+    def down(self):
+        self.segments[0].setheading(270)
+
+    def left(self):
+        self.segments[0].setheading(180)
+
+    def right(self):
+        self.segments[0].setheading(0)
